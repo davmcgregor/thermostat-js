@@ -1,0 +1,38 @@
+body { 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#temperature {
+  font-size: 200px;
+  border-style: solid; 
+  border-width: 10px;
+  margin: 0 auto;
+  display: table;
+}
+
+#power-saving-intro {
+  font-size: 40px;
+}
+#power-saving-status {
+  font-size: 80px;
+  color: purple;
+}
+
+.controls {
+  height: relative;
+  width:relative;
+  font-size:40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.high-usage {
+  color: red;
+}
+
+.medium-usage {
+  color: orange;
+}
+
+.low-usage {
+  color: green;
+}
