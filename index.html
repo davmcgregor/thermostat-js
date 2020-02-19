@@ -16,6 +16,14 @@
         <button id="PSM-off" class="controls">PSM off</button>
       </p>
     </section>
+
+    <section>
+      <h1>Current temperature: <span id="current-temperature"></span></h1>
+      <form id="select-city">
+        <input id="current-city" type="text" placeholder="Enter a city"></input>
+        <input type="submit"></input>
+      </form>
+    </section>
     <script src="src/Thermostat.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
@@ -59,6 +67,21 @@
       function updateTemp() {
         $('#temperature').text(thermostat.getCurrentTemp());
         $('#temperature').attr('class', thermostat.energyUsage());
+      }
+
+      $('#select-city').submit(function(event) {
+        event.preventDefault();
+        var city = $('#current-city').val();
+        displayWeather(city);
+      })
+
+      function displayWeather(city) {
+        var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+        var token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed';
+        var units = '&units=metric';
+        $.get(url + token + units, function(data) {
+          $('#current-temperature').text(data.main.temp);
+        })
       }
 
     });
