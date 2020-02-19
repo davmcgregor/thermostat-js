@@ -19,21 +19,21 @@ Thermostat.prototype.resetTemp = function() {
 };
 
 Thermostat.prototype.increase = function () {
-  if (this.isMaximumTemp()) {
+  if (this.isMaximumTemp() === true) {
     return;
   }
   this.temp ++;
 };
 
 Thermostat.prototype.isMaximumTemp = function() {
-  if (this.isPowerSavingModeOn() === false) {
+  if (this.isPowerSavingModeOn() === true) {
     return this.temp >= this.MAX_LIMIT_PSM_ON;
   }
   return this.temp >= this.MAX_LIMIT_PSM_OFF;
 }
 
 Thermostat.prototype.decrease = function () {
-  if (this.isMinimumTemp()) {
+  if (this.isMinimumTemp() === true) {
     return;
   }
   this.temp --;
