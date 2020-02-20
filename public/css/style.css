@@ -44,6 +44,10 @@ body {
   font-size: 30px;
 }
 
+.control-panel {
+  padding-top: 15%;
+}
+
 .control-button {
   font-size:40px;
   background: none!important;
