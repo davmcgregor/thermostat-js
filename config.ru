@@ -1,2 +1,2 @@
-require "./app.rb"
-run Thermostat
+require "./app/app.rb"
+run Sinatra::Application
