@@ -51,4 +51,4 @@ $ rackup
  * Add further functionality so that the user can select their current city and the weather provided is for the selected city.
 
  ## <a name="Further_Improvements">Further Improvements</a>
-* Store state in sinatra using json/javascript: [Example 1](https://stackoverflow.com/questions/36343170/how-to-store-state-using-in-sinatra-using-json-javascript-without-databases, [Example 2](https://github.com/nadavmatalon/thermostat)
+* Store state in sinatra using json/javascript: [Example 1](https://stackoverflow.com/questions/36343170/how-to-store-state-using-in-sinatra-using-json-javascript-without-databases), [Example 2](https://github.com/nadavmatalon/thermostat)
